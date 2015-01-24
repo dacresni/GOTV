@@ -12,7 +12,13 @@
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//sinonjs.org/releases/sinon-1.12.2.js"></script>
   <script>
+var xhr, requests;
+before(function() {
+xhr = sinon.useFakeXMLHttpRequest();
+
+}
     QUnit.test( "display contents of tuple as table", function( assert ) {
+    sinon.stub(JQuery,"get");
       var expected = {name:"john Dow", comment: "", status:"NH", email-address:"vivacarlie@gmail.com", sign-in-yard: "true" };
       assert.equal( actual , expected  );
     })
