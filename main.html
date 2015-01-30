@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!--     <select data-bind="options: availableCountries, selectedOptions: chosenCountries" size="5" multiple="true"></select> -->
+</head>
+<body>
+<h1>GOTV</h1>
+<select class="form-control" data-bind="options: turfs, selectedOptions: chosenTurf"></select>
+<script type="text/javascript">
+  var viewModel = {
+    turfs: ko.observableArray([]),
+    chosenTurf: ko.observableArray(["marvin"])
+  };
+  $.getJSON("turfs.json",function(data){
+  viewModel.turfs.concat(data.turfs);
+  })
+  ko.applyBindings(viewModel);
+</script>
+</body>
+</html>
