@@ -28,12 +28,13 @@
   };
   ko.applyBindings(viewModel);
   $("getlist").click(function(){
+    console.log("send request");
     $.getJSON("http://ward7.xcmc.org/voterInfo.php",{
-      viewModel.chosenTurf,
-      viewmodel.chosenPrecinct
-      },
-    ,function(results){
-  voters.concat(results)));
+        turf:viewModel.chosenTurf,
+        precinct:viewModel.chosenPrecinct
+      },function(results){
+        viewMovel.voters.concat(results)
+      });
   })
 </script>
 </body>
