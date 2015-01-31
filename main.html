@@ -12,15 +12,29 @@
 <body>
 <h1>GOTV</h1>
 <select class="form-control" data-bind="options: turfs, selectedOptions: chosenTurf"></select>
+<select class="form-control" data-bind="options: precinct, selectedOptions: chosenPrecinct"></select>
+<h1 class="btn" id="getlist">getresults</h1>
+<li>
+
+</li>
+
 <script type="text/javascript">
   var viewModel = {
-    turfs: ko.observableArray([]),
-    chosenTurf: ko.observableArray(["marvin"])
+    turfs: ko.observableArray([1,2,3,4,5]),
+    chosenTurf: ko.observableArray([1]),
+    precinct: ko.observableArray([1,2,3,4,5,6]),
+    chosenPrecinct: ko.observableArray([1]),
+    voters:ko.observableArray([])
   };
-  $.getJSON("turfs.json",function(data){
-  viewModel.turfs.concat(data.turfs);
-  })
   ko.applyBindings(viewModel);
+  $("getlist").click(function(){
+    $.getJSON("http://ward7.xcmc.org/voterInfo.php",{
+      viewModel.chosenTurf,
+      viewmodel.chosenPrecinct
+      },
+    ,function(results){
+  voters.concat(results)));
+  })
 </script>
 </body>
 </html>
