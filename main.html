@@ -14,9 +14,22 @@
 <select class="form-control" data-bind="options: turfs, selectedOptions: chosenTurf"></select>
 <select class="form-control" data-bind="options: precinct, selectedOptions: chosenPrecinct"></select>
 <h1 class="btn" id="getlist">getresults</h1>
-<li>
+<table>
+<thead><tr>
+        <th>GOTV </th><th>Name</th><th>Phone </th><th>knock1Result</th><th>callAttempt</th><th>callResult</th>
+       </tr>
+<tbody data-bind="foreach: viewModel.voters">
+     <tr>
+        <td data-bind="text: GOTVID"></td>
+        <td data-bind="text: fullName"></td>
+        <td data-bind="text: phone"></td>
+        <td data-bind="text: knock1Result"></td>
+        <td data-bind="text: callAttempt"></td>
+        <td data-bind="text: callResult"></td>
+    </tr>
+</tbody>
+</table>
 
-</li>
 
 <script type="text/javascript">
   var viewModel = {
@@ -27,13 +40,16 @@
     voters:ko.observableArray([])
   };
   ko.applyBindings(viewModel);
-  $("getlist").click(function(){
+  $("#getlist").click(function(){
     console.log("send request");
     $.getJSON("http://ward7.xcmc.org/voterInfo.php",{
         turf:viewModel.chosenTurf,
         precinct:viewModel.chosenPrecinct
       },function(results){
-        viewMovel.voters.concat(results)
+        results.forEach(function(item){
+          viewModel.voters().push(item)
+        }); 
+	console.log(results);
       });
   })
 </script>
