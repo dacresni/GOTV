@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!--     <select data-bind="options: availableCountries, selectedOptions: chosenCountries" size="5" multiple="true"></select> -->
+</head>
+<body>
+<h1>GOTV</h1>
+<select class="form-control" data-bind="options: turfs, selectedOptions: chosenTurf"></select>
+<select class="form-control" data-bind="options: precinct, selectedOptions: chosenPrecinct"></select>
+<h1 class="btn" id="getlist">getresults</h1>
+<table>
+<thead><tr>
+        <th>GOTV </th><th>Name</th><th>Phone </th><th>knock1Result</th><th>callAttempt</th><th>callResult</th>
+       </tr>
+<tbody data-bind="foreach: viewModel.voters">
+     <tr> <td data-bind="text: GOTVID"></td>
+        <td data-bind="text: fullName"></td>
+        <td data-bind="text: phone"></td>
+        <td data-bind="text: knock1Result"></td>
+        <td data-bind="text: callAttempt"></td>
+        <td data-bind="text: callResult"></td>
+    </tr>
+</tbody>
+</table>
+
+
+<script type="text/javascript">
+  var viewModel = {
+    turfs: ko.observableArray([1,2,3,4,5]),
+    chosenTurf: ko.observableArray([1]),
+    precinct: ko.observableArray([1,2,3,4,5,6]),
+    chosenPrecinct: ko.observableArray([1]),
+    voters:ko.observableArray([])
+  };
+  ko.applyBindings(viewModel);
+  $("#getlist").click(function(){
+    console.log("send request");
+    $.getJSON("http://ward7.xcmc.org/voterInfo.php",{
+        turf:viewModel.chosenTurf,
+        precinct:viewModel.chosenPrecinct
+      },function(results){
+        results.forEach(function(item){
+          viewModel.voters().push(item)
+        }); 
+	console.log(results);
+      });
+  })
+</script>
+</body>
+</html>
