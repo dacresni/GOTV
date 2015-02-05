@@ -8,7 +8,7 @@
 	     <td>Voter</td>
 	     <td>Call Result</td>
 	     <td>Knock Result</td>
-	     <td>Phone</td>
+	     <td>Phone  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 	     <td>Sign</td>
 	     <td>Address</td>
 	     <td>Notes</td>
