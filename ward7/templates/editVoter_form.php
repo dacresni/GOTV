@@ -16,22 +16,27 @@
   <?= $entryData["phone"] ?><br>
   <?= $entryData["email"] ?><br>
   <p>
-  Details:<br />
-  Age: <?= $entryData["age"] ?>,
-  Voter ID:<?= $entryData["voterID"] ?>,
-  First Name:<?= $entryData["firstName"] ?>,
-  Middle Name:<?= $entryData["middleName"] ?>,
-  Last Name:<?= $entryData["lastName"] ?>,
-  Suffix:<?= $entryData["suffix"] ?>, <br />
-  Birthdate:<?= $entryData["birthdate"] ?> <br />
-
-  Adress Details: suffix:<?= $entryData["suffix"] ?>,
-  houseNumber:<?= $entryData["houseNumber"] ?>,
-  houseSuffix:<?= $entryData["houseSuffix"] ?>,
-  streetName:<?= $entryData["streetName"] ?>,
-  streetType:<?= $entryData["streetType"] ?>,
-  unitType:<?= $entryData["unitType"] ?>,
-  unitNumber:<?= $entryData["unitNumber"] ?>
+    Details:<br/>
+          <dl> 	    
+    <dt> Age: </dt> <dd><?= $entryData["age"] ?>,</dd> 
+    <dt> Voter ID: </dt> <dd><?= $entryData["voterID"] ?>,</dd>
+    <dt>First Name:</dt><dd><?= $entryData["firstName"] ?>,</dd>
+    <dt> Middle Name:</dt><dd><?= $entryData["middleName"] ?>,</dd>
+    <dt> Last Name:</dt><dd><?= $entryData["lastName"] ?>,</dd>
+    <dt> Suffix:</dt><dd><?= $entryData["suffix"] ?>, </dd>
+    <dt> Birthdate:</dt><dd><?= $entryData["birthdate"] ?> </dd>
+        </dl> 	    
+         <br/>
+        <dl> 	    
+    <dt> Adress Details:</dt>  <br/>
+    <dt> suffix:<dd></dt><?= $entryData["suffix"] ?>,</dd>
+    <dt> houseNumber:</dt><dd><?= $entryData["houseNumber"] ?>,</dd>
+    <dt> houseSuffix:</dt><dd><?= $entryData["houseSuffix"] ?>,</dd>
+    <dt> streetName:</dt><dd><?= $entryData["streetName"] ?>,</dd>
+    <dt> streetType:</dt><dd><?= $entryData["streetType"] ?>,</dd>
+    <dt>unitType:</dt><dd><?= $entryData["unitType"] ?>,</dd>
+    <dt>unitNumber:</dt><dd><?= $entryData["unitNumber"] ?></dd>
+        </dl> 	    
 
   </p>
   </div>
