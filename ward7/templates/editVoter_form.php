@@ -8,14 +8,14 @@
 
   ?>
 
-  <h2><?= $entryData["GOTVID"] ?></h2>
+  <h3><?= $entryData["GOTVID"] ?>
   <div class="data">
   <?= $entryData["fullName"] ?><br>
   <?= $entryData["address"] ?><br>
   <?= $entryData["city"] ?> <?= $entryData["state"] ?>, <?= $entryData["zipCode"] ?> <br>
   <?= $entryData["phone"] ?><br>
   <?= $entryData["email"] ?><br>
-  </div>
+  </div></h3>
   <p>
       <dl class="dl-horizontal list-group" >
     <dt class="list-group-item" >Details:</dt>     <dd class="list-group-item"></dd> <br/>

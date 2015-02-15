@@ -11,7 +11,7 @@
 	     <td>Phone  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 	     <td>Sign</td>
 	     <td>Address</td>
-	     <td>Notes</td>
+	     <!--<td>Notes</td> -->
 	</tr>
 	<?php
 
@@ -26,7 +26,7 @@
 	    print "<td>" . $entry["phone"] . "</td>";
 	    print "<td>" . $entry["sign"] . "</td>";
 	    print "<td>" . $entry["address"] . "</td>";
-	    print "<td>" . $entry["notes"] . "</td>";
+	    //print "<td>" . $entry["notes"] . "</td>";
 	    print "</tr>";
 	}
 	?>
