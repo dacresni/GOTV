@@ -19,6 +19,9 @@
     "knockoutjs": "~3.2.0",
     "qunit": "~1.17.1",
     "sinonjs": "~1.10.2",
-    "jquery": "~2.1.3"
+    "jquery": "~2.1.3",
+    "polymer": "Polymer/polymer#latest",
+    "paper-elements": "Polymer/paper-elements#latest"
+
   }
 }
