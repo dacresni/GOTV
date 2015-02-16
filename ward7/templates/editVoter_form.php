@@ -19,23 +19,23 @@
   <p>
       <dl class="dl-horizontal list-group" >
     <dt class="list-group-item" >Details:</dt>     <dd class="list-group-item"></dd> <br/>
-    <dt class="list-group-item"> Age: </dt>       <dd class="list-group-item"><?= $entryData["age"] ?>,</dd> 
-    <dt class="list-group-item"> Voter ID</dt>    <dd class="list-group-item"><?= $entryData["voterID"] ?>,</dd>
-    <dt class="list-group-item"> First Name:</dt>  <dd class="list-group-item"><?= $entryData["firstName"] ?>,</dd>
-    <dt class="list-group-item"> Middle Name:</dt><dd class="list-group-item"><?= $entryData["middleName"] ?>,</dd>
-    <dt class="list-group-item"> Last Name:</dt>  <dd class="list-group-item"><?= $entryData["lastName"] ?>,</dd>
-    <dt class="list-group-item"> Suffix:</dt>     <dd class="list-group-item"><?= $entryData["suffix"] ?>, </dd>
+    <dt class="list-group-item"> Age: </dt>       <dd class="list-group-item"><?= $entryData["age"] ?></dd> 
+    <dt class="list-group-item"> Voter ID</dt>    <dd class="list-group-item"><?= $entryData["voterID"] ?></dd>
+    <dt class="list-group-item"> First Name:</dt>  <dd class="list-group-item"><?= $entryData["firstName"] ?></dd>
+    <dt class="list-group-item"> Middle Name:</dt><dd class="list-group-item"><?= $entryData["middleName"] ?></dd>
+    <dt class="list-group-item"> Last Name:</dt>  <dd class="list-group-item"><?= $entryData["lastName"] ?></dd>
+    <dt class="list-group-item"> Suffix:</dt>     <dd class="list-group-item"><?= $entryData["suffix"] ?> </dd>
     <dt class="list-group-item"> Birthdate:</dt>  <dd class="list-group-item"><?= $entryData["birthdate"] ?> </dd>
       </dl> 	    
          <br/>
         <dl class="dl-horizontal list-groupl"> 	    
     <dt class="list-group-item">Adress Details:</dt> <dd class="list-group-item"></dd> <br/>
-    <dt class="list-group-item"> suffix:<dd class="list-group-item"></dt><?= $entryData["suffix"] ?>,</dd>
-    <dt class="list-group-item"> houseNumber:</dt><dd class="list-group-item"><?= $entryData["houseNumber"] ?>,</dd>
-    <dt class="list-group-item"> houseSuffix:</dt><dd class="list-group-item"><?= $entryData["houseSuffix"] ?>,</dd>
-    <dt class="list-group-item"> streetName:</dt><dd class="list-group-item"><?= $entryData["streetName"] ?>,</dd>
-    <dt class="list-group-item"> streetType:</dt><dd class="list-group-item"><?= $entryData["streetType"] ?>,</dd>
-    <dt class="list-group-item">unitType:</dt><dd class="list-group-item"><?= $entryData["unitType"] ?>,</dd>
+    <dt class="list-group-item"> suffix:<dd class="list-group-item"></dt><?= $entryData["suffix"] ?></dd>
+    <dt class="list-group-item"> houseNumber:</dt><dd class="list-group-item"><?= $entryData["houseNumber"] ?></dd>
+    <dt class="list-group-item"> houseSuffix:</dt><dd class="list-group-item"><?= $entryData["houseSuffix"] ?></dd>
+    <dt class="list-group-item"> streetName:</dt><dd class="list-group-item"><?= $entryData["streetName"] ?></dd>
+    <dt class="list-group-item"> streetType:</dt><dd class="list-group-item"><?= $entryData["streetType"] ?></dd>
+    <dt class="list-group-item">unitType:</dt><dd class="list-group-item"><?= $entryData["unitType"] ?></dd>
     <dt class="list-group-item">unitNumber:</dt><dd class="list-group-item"><?= $entryData["unitNumber"] ?></dd>
         </dl> 	    
 
