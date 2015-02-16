@@ -21,7 +21,7 @@
     "sinonjs": "~1.10.2",
     "jquery": "~2.1.3",
     "polymer": "Polymer/polymer#latest",
-    "paper-elements": "Polymer/paper-elements#latest"
-
+    "paper-elements": "Polymer/paper-elements#latest",
+    "core-list": "Polymer/core-list#~0.5.4"
   }
 }
